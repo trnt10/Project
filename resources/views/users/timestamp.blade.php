@@ -24,8 +24,8 @@
                     @endif
             </div>
             <div class="col col-sm-3">
-                <label for="m_id">เวลาออกงาน</label>
-                @if($current_time > '17:00:00')
+                <label for="users_id">เวลาออกงาน</label>
+                @if($current_time > '23:50:00')
                     @if(isset($attemp_timestamp))
                         <input type="text" class="form-control" name="attemp_timestamp" value="{{ date('H:i:s',strtotime($attemp_timestamp->attemp_timestamp)) }}" disabled>
                     @else
@@ -35,6 +35,7 @@
                     <br><span style="color: red;"> หลัง 16:30น. ถึงลงเวลาได้อีกครั้ง </span>
                 @endif
             </div>
+
             <div class="col col-sm-1">
                 <label>บันทึกเวลา</label><br>
                 <button type="submit" class="btn btn-primary">บันทึก</button>

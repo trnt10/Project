@@ -38,7 +38,8 @@ class TimestampController extends Controller
         $attemp->attemp_in_out = 1;
         $attemp->save();
 
-        return redirect()->route('savetime.index')->with('success','Create Time Success');
+        return redirect()->back();
+        // return redirect()->route('savetime.index')->with('success','Create Time Success');
     }
 
     /**
