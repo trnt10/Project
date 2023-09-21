@@ -7,7 +7,7 @@
     </head>
 
 <div class="col col-sm-9">
-    <h3>ลงเวลาเข้า - ออกงาน วันที่ : {{ date('d-m-Y') }}</h3>
+    <h3>ลงเวลาเข้า - ออกงาน วันที่ : {{ date('d/m/Y') }}</h3>
     <form action="{{ route('savetime.store')}}" method="POST" class="form-horizontal">
         @csrf
         <div class="row" >
