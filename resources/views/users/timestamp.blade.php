@@ -25,7 +25,7 @@
             </div>
             <div class="col col-sm-3">
                 <label for="users_id">เวลาออกงาน</label>
-                @if($current_time > '23:50:00')
+                @if($current_time > '16:30:00')
                     @if(isset($attemp_timestamp))
                         <input type="text" class="form-control" name="attemp_timestamp" value="{{ date('H:i:s',strtotime($attemp_timestamp->attemp_timestamp)) }}" disabled>
                     @else
@@ -42,15 +42,6 @@
             </div>
         </div>
     </form>
-
-    {{-- <p> --}}
-
-       {{-- {{date('Y-m-d', strtotime($attemp_timestamp->attemp_timestamp))}}<br>
-       {{date('H:i:s', strtotime($attemp_timestamp->attemp_timestamp))}} --}}
-        {{-- $time = $attemp_timestamp->format('H:i');
-         --}}
-    {{-- </p> --}}
-
 </div>
 
 @endsection
