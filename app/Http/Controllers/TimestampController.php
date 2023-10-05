@@ -28,21 +28,19 @@ class TimestampController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    { // เวลาเช็คเข้าออก ให้ดักที่เวลาเเทน 
-      // ex. @if($currenttime =<16.30 ){
-        // update g
-     // }
+    { 
         // dd($request);
 
         $current_time = Carbon::now()->format('H:i:s');
 
         $attemp = new Attemp();
         $attemp->attemp_timestamp = $request->input($current_time);
-        $attemp->attemp_in_out = 1;
         $attemp->save();
 
-        return redirect()->back();
+        // return redirect()->back();
         // return redirect()->route('savetime.index')->with('success','Create Time Success');
+        return redirect()->back();
+        
     }
 
     /**

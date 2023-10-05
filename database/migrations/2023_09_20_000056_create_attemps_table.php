@@ -13,8 +13,11 @@ return new class extends Migration
     {
         Schema::create('attemps', function (Blueprint $table) {
             $table->id('attemp_id');
-            $table->timestamp('attemp_timestamp');
-            $table->integer('attemp_in_out');
+            $table->date('attemp_date');
+            $table->time('attemp_timestamp');
+            // $table->string('attemp_longgitude');
+            // $table->string('attemp_latitude');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
-// Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('users.index');
+Route::get('/index', [App\Http\Controllers\DashboardController::class, 'index'])->name('users.index');
 Route::get('/timestamp', [App\Http\Controllers\DashboardController::class, 'timestamp'])->name('users.timestamp');
 Route::resource('savetime', TimestampController::class);
 

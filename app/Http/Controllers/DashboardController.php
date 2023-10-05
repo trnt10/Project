@@ -17,8 +17,9 @@ class DashboardController extends Controller
     public function timestamp()
     {
         //
-        $attemp = ['attemp_timestamp'];
-        $attemp_timestamp = Attemp::select($attemp)->first();
+        $attemp_timestamp = ['attemp_timestamp'];
+
+        $attemp = Attemp::select($attemp_timestamp)->first();
 
         // $date = $attemp_timestamp->format('Y-m-d');
         // $time = $attemp_timestamp->format('H:i');
@@ -27,6 +28,6 @@ class DashboardController extends Controller
         $current_time = Carbon::now()->format('H:i:s');
 
 
-        return view('users.timestamp', compact('current_time','attemp_timestamp'));
+        return view('users.timestamp', compact('current_time','attemp'));
     }
 }
